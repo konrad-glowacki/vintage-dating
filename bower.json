@@ -1,0 +1,22 @@
+{
+  "name": "vintage-dating",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "Konrad"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/webkrak/vintage-dating",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
