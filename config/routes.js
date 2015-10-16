@@ -25,7 +25,5 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'get /admin': {
-    view: 'admin/announcements'
-  }
+  'GET /admin': 'admin/AnnouncementController.index'
 };
