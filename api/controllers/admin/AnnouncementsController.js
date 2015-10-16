@@ -7,10 +7,9 @@
 
 module.exports = {
   index: function (req, res) {
-    // Announcement.find().done(function(err, announcements) {
-    //   return res.view({ announcements: announcements });
-    // });
-    return res.view({ announcements: [] });
+    Announcement.find().done(function(err, announcements) {
+      return res.view({ announcements: announcements });
+    });
   },
 
   /**
