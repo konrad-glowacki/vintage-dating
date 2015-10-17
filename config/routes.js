@@ -24,9 +24,6 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  '/create':{
-    view:'create'
-  },
 
   'GET /admin': 'admin/AnnouncementsController.index'
 };
