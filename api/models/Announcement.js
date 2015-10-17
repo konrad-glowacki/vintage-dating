@@ -5,7 +5,7 @@ module.exports = {
       required: true
     },
 
-    sex: {
+    gender: {
       type: 'string',
       enum: ['male', 'female'],
       required: true
@@ -20,7 +20,7 @@ module.exports = {
     age: {
       type: 'string',
       enum: ['young', 'medium', 'old'],
-      require: true
+      required: true
     }
   }
 };

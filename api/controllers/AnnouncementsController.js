@@ -12,22 +12,13 @@ module.exports = {
     });
   },
 
-  /**
-   * `AnnouncementController.new()`
-   */
   new: function (req, res) {
-    return res.json({
-      todo: 'new() is not implemented yet!'
-    });
+    return res.view();
   },
 
-
-  /**
-   * `AnnouncementController.create()`
-   */
   create: function (req, res) {
-    return res.json({
-      todo: 'create() is not implemented yet!'
+    Announcement.create(req.param('announcement')).exec(function(err, announcement) {
+      return res.redirect('/announcements');
     });
   },
 

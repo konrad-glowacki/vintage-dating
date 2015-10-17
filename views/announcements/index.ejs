@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="starter-template" style="padding">
+    <h1>Ogłoszenia</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Płeć</th>
+          <th>Szuka</th>
+          <th>Przedział wiekowy</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% announcements.forEach(function(item, index) { %>
+          <tr>
+            <th scope="row"><%= item.id %></th>
+            <td><%= item.gender %></td>
+            <td><%= item.looking_for %></td>
+            <td><%= item.age %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="starter-template" style="padding">
+    <h1>Dodaj Ogłoszenie</h1>
+
+    <form role="form" action="/announcements" method="post">
+      <div class="form-group">
+        <label for="genger" class="col-xs-3 control-label">Płeć:</label>
+        <select id="gender" name="announcement[gender]">
+          <option value="male">mężczyzna</option>
+          <option value="female">kobieta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="col-xs-3 control-label" for="looking_for">Szukam:</label>
+        <select id="looking_for" name="announcement[looking_for]">
+          <option value="male">mężczyzna</option>
+          <option value="female">kobieta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="age" class="col-xs-3 control-label">Przedział wiekowy:</label>
+        <select id="age" name="announcement[age]">
+          <option value="young">młodociany</option>
+          <option value="medium">średni wiek</option>
+          <option value="old">starsza osoba</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="content" class="col-xs-3 control-label">Treść:</label>
+        <textarea id="content" class="form-control" rows="3" name="announcement[content]"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-default">Dodaj ogłoszenie</button>
+    </form>
+  </div>
+</div>
