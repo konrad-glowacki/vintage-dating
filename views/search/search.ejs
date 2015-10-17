@@ -1,9 +1,18 @@
 <div class="container">
   <div class="starter-template">
-    <h1 style="text-align:center;">Oto twoja para:</h1>
-      <div id="match"></div>
-      <button id="like" type="submit" class="btn btn-default">like</span></button>
-      <button id="dislike" type="submit" class="btn btn-default">don't like</span></button>
-    </div>
+    <% if (announcement && image) { %>
+      <h1 style="text-align:center;">Oto twoja para:</h1>
+      <div id="match">
+        <img src="/images/<%= image.id %>/attachment" alt="match" />
+        <p class="lead"><%= announcement.content %></p>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-success btn-lg">Like! :)</span></button>
+        <button type="submit" class="btn btn-danger btn-lg">Don't like :(</span></button>
+      </div>
+    <% } else { %>
+      <h1 style="text-align:center;">Brak wyników</h1>
+    <% } %>
   </div>
 </body>

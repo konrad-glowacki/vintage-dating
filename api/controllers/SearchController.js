@@ -11,6 +11,13 @@ module.exports = {
   },
 
   search: function (req, res) {
-    return res.view();
+    Announcement.random(req.param('search'), function(err, announcement) {
+      Image.random(req.param('search'), function(err, image) {
+        console.log('announcement', announcement);
+        console.log('image', image);
+
+        return res.view({ announcement: announcement, image: image });
+      });
+    });
   }
 };
