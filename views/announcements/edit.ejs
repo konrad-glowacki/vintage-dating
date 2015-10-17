@@ -2,42 +2,52 @@
   <div class="starter-template" style="padding">
     <h1>Edycja Ogłoszenia</h1>
 
-    <form role="form" action="/announcements/update/<%= announcement.id %>" method="post">
+    <form role="form" action="/announcements/update/<%= announcement.id %>" method="post" class="form-horizontal">
       <input type="hidden" name="_method" value="put" />
 
       <div class="form-group">
-        <label for="name" class="col-xs-3 control-label">Nazwa (własna):</label>
-        <input type="text" name="announcement[name]" class="form-control" id="name" value="<%= announcement.name %>" />
+        <label for="name" class="col-md-4 control-label">Nazwa (własna):</label>
+        <div class="col-md-8">
+          <input type="text" name="announcement[name]" class="form-control" id="name" value="<%= announcement.name %>" />
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="gender" class="col-xs-3 control-label">Płeć:</label>
-        <select id="gender" name="announcement[gender]">
-          <option value="male" <% if(announcement.gender === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
-          <option value="female" <% if(announcement.gender === 'female') { %>selected="selected"<% } %>>kobieta</option>
-        </select>
+        <label for="gender" class="col-md-4 control-label">Płeć:</label>
+        <div class="col-md-8">
+          <select id="gender" name="announcement[gender]" class="form-control">
+            <option value="male" <% if(announcement.gender === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+            <option value="female" <% if(announcement.gender === 'female') { %>selected="selected"<% } %>>kobieta</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label class="col-xs-3 control-label" for="looking_for">Szukam:</label>
-        <select id="looking_for" name="announcement[looking_for]">
-          <option value="male" <% if(announcement.looking_for === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
-          <option value="female" <% if(announcement.looking_for === 'female') { %>selected="selected"<% } %>>kobieta</option>
-        </select>
+        <label class="col-md-4 control-label" for="looking_for">Szukam:</label>
+        <div class="col-md-8">
+          <select id="looking_for" name="announcement[looking_for]" class="form-control">
+            <option value="male" <% if(announcement.looking_for === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+            <option value="female" <% if(announcement.looking_for === 'female') { %>selected="selected"<% } %>>kobieta</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="age" class="col-xs-3 control-label">Przedział wiekowy:</label>
-        <select id="age" name="announcement[age]">
-          <option value="young" <% if(announcement.age === 'young') { %>selected="selected"<% } %>>młodociany</option>
-          <option value="young" <% if(announcement.age === 'medium') { %>selected="selected"<% } %>>średni wiek</option>
-          <option value="young" <% if(announcement.age === 'old') { %>selected="selected"<% } %>>starsza osoba</option>
-        </select>
+        <label for="age" class="col-md-4 control-label">Przedział wiekowy:</label>
+        <div class="col-md-8">
+          <select id="age" name="announcement[age]" class="form-control">
+            <option value="young" <% if(announcement.age === 'young') { %>selected="selected"<% } %>>młodociany</option>
+            <option value="young" <% if(announcement.age === 'medium') { %>selected="selected"<% } %>>średni wiek</option>
+            <option value="young" <% if(announcement.age === 'old') { %>selected="selected"<% } %>>starsza osoba</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="content" class="col-xs-3 control-label">Treść:</label>
-        <textarea id="content" class="form-control" rows="3" name="announcement[content]"><%= announcement.content %></textarea>
+        <label for="content" class="col-md-4 control-label">Treść:</label>
+        <div class="col-md-8">
+          <textarea id="content" class="form-control" rows="3" name="announcement[content]"><%= announcement.content %></textarea>
+        </div>
       </div>
 
       <div class="clearfix">

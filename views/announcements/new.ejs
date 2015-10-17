@@ -2,43 +2,56 @@
   <div class="starter-template" style="padding">
     <h1>Dodaj Ogłoszenie</h1>
 
-    <form role="form" action="/announcements/create" method="post">
+    <form role="form" action="/announcements/create" method="post" class="form-horizontal">
       <div class="form-group">
-        <label for="name" class="col-xs-3 control-label">Nazwa (własna):</label>
-        <input type="text" name="announcement[name]" class="form-control" id="name" />
+        <label for="name" class="col-md-4 control-label">Nazwa (własna):</label>
+        <div class="col-md-8">
+          <input type="text" name="announcement[name]" class="form-control" id="name" />
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="genger" class="col-xs-3 control-label">Płeć:</label>
-        <select id="gender" name="announcement[gender]">
-          <option value="male">mężczyzna</option>
-          <option value="female">kobieta</option>
-        </select>
+        <label for="genger" class="col-md-4 control-label">Płeć:</label>
+        <div class="col-md-8">
+          <select id="gender" name="announcement[gender]" class="form-control">
+            <option value="male">mężczyzna</option>
+            <option value="female">kobieta</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label class="col-xs-3 control-label" for="looking_for">Szukam:</label>
-        <select id="looking_for" name="announcement[looking_for]">
-          <option value="male">mężczyzna</option>
-          <option value="female">kobieta</option>
-        </select>
+        <label class="col-md-4 control-label" for="looking_for">Szukam:</label>
+        <div class="col-md-8">
+          <select id="looking_for" name="announcement[looking_for]" class="form-control">
+            <option value="male">mężczyzna</option>
+            <option value="female">kobieta</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="age" class="col-xs-3 control-label">Przedział wiekowy:</label>
-        <select id="age" name="announcement[age]">
-          <option value="young">młodociany</option>
-          <option value="medium">średni wiek</option>
-          <option value="old">starsza osoba</option>
-        </select>
+        <label for="age" class="col-md-4 control-label">Przedział wiekowy:</label>
+        <div class="col-md-8">
+          <select id="age" name="announcement[age]" class="form-control">
+            <option value="young">młodociany</option>
+            <option value="medium">średni wiek</option>
+            <option value="old">starsza osoba</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="content" class="col-xs-3 control-label">Treść:</label>
-        <textarea id="content" class="form-control" rows="3" name="announcement[content]"></textarea>
+        <label for="content" class="col-md-4 control-label">Treść:</label>
+        <div class="col-md-8">
+          <textarea id="content" class="form-control" rows="3" name="announcement[content]"></textarea>
+        </div>
       </div>
 
-      <button type="submit" class="btn btn-default">Dodaj ogłoszenie</button>
+      <div class="clearfix">
+        <a href="/announcements" class"btn btn-default pull-left">Confnij</a>
+        <button type="submit" class="btn btn-success pull-right">Dodaj ogłoszenie</button>
+      </div>
     </form>
   </div>
 </div>
