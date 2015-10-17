@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/admin/index">Znajdz Partnera !</a>
+          <a class="navbar-brand" href="/admin/index.ejs">Znajdz Partnera!</a>
         </div>
         <!--<div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -21,8 +21,16 @@
     </nav>
      <div class="container">
       <div class="starter-template" style="padding">
-        <h1>Wypełnij formularz poniżej</h1>
+        <h1>Dodaj Profil</h1>
         <form role="form">
+			<div class="form-group">
+            <label  class="col-xs-3 control-label">Imie:</label>
+            <input id="name" type="text"/>
+          </div>
+		  <div class="form-group">
+            <label  class="col-xs-3 control-label">Nazwisko:</label>
+            <input id="surname" type="text"/>
+          </div>
           <div class="form-group">
            <label class="col-xs-3 control-label">Płeć:</label>
            <select id="1gender"  class="gender" name="gender">
@@ -30,15 +38,6 @@
             <option value="female">Kobieta</option>
             <option value="other">Inna</option>
            </select>
-          </div>
-          <div class="form-group">
-           <label class="col-xs-3 control-label">Szukam:</label>
-           <select id="gender"  class="gender" name="gender">
-            <option value="male">Mężczyzna</option>
-            <option value="female">Kobieta</option>
-            <option value="other">Inna</option>
-           </select>
-
           </div>
           <div class="form-group">
             <label class="col-xs-3 control-label">Data Urodzenia:</label>
@@ -145,12 +144,11 @@
             <option value="1900">1900</option>
          </select>
           </div>
-          <div class="form-group">
-            <label  class="col-xs-3 control-label">Lokalizacja:</label>
-            <input id="lok" type="text" id="where"/>
-          </div>
-          <button type="submit" class="btn btn-default">Znajdz Pare !</button>
+          <button id="add" type="submit" class="btn btn-default">Dodaj</button>
+		            <div id="generator">OBRAZEK</div>
+		      <button id="generate" type="submit" class="btn btn-default">Generuj</button>
         </form>
+        
       </div>
 
     </div>
