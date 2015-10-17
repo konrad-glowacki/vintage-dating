@@ -1,16 +1,16 @@
 <div class="container">
   <div class="starter-template" style="padding">
-    <h1>Ogłoszenia</h1>
+    <h1>Zdjęcia</h1>
 
     <div class="text-right">
-      <a href="/announcements/new" class="btn btn-info">Dodaj ogłoszenie</a>
+      <a href="/images/new" class="btn btn-info">Dodaj zdjęcie</a>
     </div>
 
     <table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
-          <th>Nazwa</th>
+          <th>Zdjęcie</th>
           <th>Płeć</th>
           <th>Szuka</th>
           <th>Przedział wiekowy</th>
@@ -19,15 +19,18 @@
       </thead>
 
       <tbody>
-        <% announcements.forEach(function(item, index) { %>
+        <% images.forEach(function(item, index) { %>
           <tr>
             <th scope="row"><%= item.id %></th>
-            <td><%= item.name %></td>
+            <td>
+              <img src="/images/<%= item.id %>/attachment" alt="photo" width="100" />
+            </td>
             <td><%= item.gender %></td>
             <td><%= item.looking_for %></td>
             <td><%= item.age %></td>
             <td>
-              <a href="/announcements/<%= item.id %>/edit">edycja</a>
+              <a href="/images/<%= item.id %>/edit">edycja</a>
+              <a href="/images/<%= item.id %>/delete">usuń</a>
             </td>
           </tr>
         <% }) %>

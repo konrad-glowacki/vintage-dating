@@ -29,5 +29,13 @@ module.exports.routes = {
   'get  /announcements/new':         'AnnouncementsController.new',
   'post /announcements/create':      'AnnouncementsController.create',
   'get  /announcements/:id?/edit':   'AnnouncementsController.edit',
-  'put  /announcements/update/:id?': 'AnnouncementsController.update'
+  'put  /announcements/update/:id?': 'AnnouncementsController.update',
+
+  'get  /images':                 'ImagesController.index',
+  'get  /images/new':             'ImagesController.new',
+  'post /images/create':          'ImagesController.create',
+  'get  /images/:id?/edit':       'ImagesController.edit',
+  'get  /images/:id?/attachment': 'ImagesController.attachment',
+  'put  /images/update/:id?':     'ImagesController.update',
+  'get  /images/:id?/delete':     'ImagesController.destroy'
 };

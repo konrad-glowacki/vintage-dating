@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="starter-template" style="padding">
+    <h1>Edycja Zdjęcia</h1>
+
+    <form role="form" action="/images/update/<%= image.id %>" method="post" class="form-horizontal">
+      <input type="hidden" name="_method" value="put" />
+
+      <div class="form-group">
+        <label for="gender" class="col-md-4 control-label">Płeć:</label>
+        <div class="col-md-8">
+          <select id="gender" name="image[gender]" class="form-control">
+            <option value="male" <% if(image.gender === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+            <option value="female" <% if(image.gender === 'female') { %>selected="selected"<% } %>>kobieta</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="looking_for">Szukam:</label>
+        <div class="col-md-8">
+          <select id="looking_for" name="image[looking_for]" class="form-control">
+            <option value="male" <% if(image.looking_for === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+            <option value="female" <% if(image.looking_for === 'female') { %>selected="selected"<% } %>>kobieta</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="age" class="col-md-4 control-label">Przedział wiekowy:</label>
+        <div class="col-md-8">
+          <select id="age" name="image[age]" class="form-control">
+            <option value="young" <% if(image.age === 'young') { %>selected="selected"<% } %>>młodociany</option>
+            <option value="young" <% if(image.age === 'medium') { %>selected="selected"<% } %>>średni wiek</option>
+            <option value="young" <% if(image.age === 'old') { %>selected="selected"<% } %>>starsza osoba</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <a href="/images" class"btn btn-default pull-left">Confnij</a>
+        <button type="submit" class="btn btn-success pull-right">Edytuj ogłoszenie</button>
+      </div>
+    </form>
+  </div>
+</div>

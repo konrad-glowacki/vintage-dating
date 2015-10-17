@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="starter-template" style="padding">
+    <h1>Dodaj Zdjęcie</h1>
+
+    <form role="form" action="/images/create" method="post" class="form-horizontal" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="attachment" class="col-md-4 control-label">Plik:</label>
+        <div class="col-md-8">
+          <input type="file" name="attachment" class="form-control" id="attachment" />
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <a href="/images" class"btn btn-default pull-left">Confnij</a>
+        <button type="submit" class="btn btn-success pull-right">Dodaj zdjęcie</button>
+      </div>
+    </form>
+  </div>
+</div>
