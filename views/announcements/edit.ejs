@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="starter-template" style="padding">
+    <h1>Edycja Ogłoszenia</h1>
+
+    <form role="form" action="/announcements/update/<%= announcement.id %>" method="post">
+      <input type="hidden" name="_method" value="put" />
+
+      <div class="form-group">
+        <label for="name" class="col-xs-3 control-label">Nazwa (własna):</label>
+        <input type="text" name="announcement[name]" class="form-control" id="name" value="<%= announcement.name %>" />
+      </div>
+
+      <div class="form-group">
+        <label for="gender" class="col-xs-3 control-label">Płeć:</label>
+        <select id="gender" name="announcement[gender]">
+          <option value="male" <% if(announcement.gender === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+          <option value="female" <% if(announcement.gender === 'female') { %>selected="selected"<% } %>>kobieta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="col-xs-3 control-label" for="looking_for">Szukam:</label>
+        <select id="looking_for" name="announcement[looking_for]">
+          <option value="male" <% if(announcement.looking_for === 'male') { %>selected="selected"<% } %>>mężczyzna</option>
+          <option value="female" <% if(announcement.looking_for === 'female') { %>selected="selected"<% } %>>kobieta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="age" class="col-xs-3 control-label">Przedział wiekowy:</label>
+        <select id="age" name="announcement[age]">
+          <option value="young" <% if(announcement.age === 'young') { %>selected="selected"<% } %>>młodociany</option>
+          <option value="young" <% if(announcement.age === 'medium') { %>selected="selected"<% } %>>średni wiek</option>
+          <option value="young" <% if(announcement.age === 'old') { %>selected="selected"<% } %>>starsza osoba</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="content" class="col-xs-3 control-label">Treść:</label>
+        <textarea id="content" class="form-control" rows="3" name="announcement[content]"><%= announcement.content %></textarea>
+      </div>
+
+      <div class="clearfix">
+        <a href="/announcements" class"btn btn-default pull-left">Confnij</a>
+        <button type="submit" class="btn btn-success pull-right">Edytuj ogłoszenie</button>
+      </div>
+    </form>
+  </div>
+</div>

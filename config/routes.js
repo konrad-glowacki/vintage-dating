@@ -25,7 +25,9 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'GET /announcements': 'AnnouncementsController.index',
-  'GET /announcements/new': 'AnnouncementsController.new',
-  'POST /announcements': 'AnnouncementsController.create'
+  'get  /announcements':             'AnnouncementsController.index',
+  'get  /announcements/new':         'AnnouncementsController.new',
+  'post /announcements/create':      'AnnouncementsController.create',
+  'get  /announcements/:id?/edit':   'AnnouncementsController.edit',
+  'put  /announcements/update/:id?': 'AnnouncementsController.update'
 };

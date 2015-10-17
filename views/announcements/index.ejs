@@ -6,9 +6,11 @@
       <thead>
         <tr>
           <th>#</th>
+          <th>Nazwa</th>
           <th>Płeć</th>
           <th>Szuka</th>
           <th>Przedział wiekowy</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -16,9 +18,13 @@
         <% announcements.forEach(function(item, index) { %>
           <tr>
             <th scope="row"><%= item.id %></th>
+            <td><%= item.name %></td>
             <td><%= item.gender %></td>
             <td><%= item.looking_for %></td>
             <td><%= item.age %></td>
+            <td>
+              <a href="/announcements/<%= item.id %>/edit">edycja</a>
+            </td>
           </tr>
         <% }) %>
       </tbody>

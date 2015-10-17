@@ -1,5 +1,10 @@
 module.exports = {
   attributes: {
+    name: {
+      type: 'string',
+      required: true
+    },
+
     content: {
       type: 'text',
       required: true

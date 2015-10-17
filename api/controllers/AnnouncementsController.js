@@ -22,30 +22,18 @@ module.exports = {
     });
   },
 
-
-  /**
-   * `AnnouncementController.edit()`
-   */
   edit: function (req, res) {
-    return res.json({
-      todo: 'edit() is not implemented yet!'
+    Announcement.findOne(req.param('id')).exec(function(err, item) {
+      return res.view({ announcement: item });
     });
   },
 
-
-  /**
-   * `AnnouncementController.update()`
-   */
   update: function (req, res) {
-    return res.json({
-      todo: 'update() is not implemented yet!'
+    Announcement.update(req.param('id'), req.param('announcement')).exec(function(err, announcement) {
+      return res.redirect('/announcements');
     });
   },
 
-
-  /**
-   * `AnnouncementController.destroy()`
-   */
   destroy: function (req, res) {
     return res.json({
       todo: 'destroy() is not implemented yet!'
