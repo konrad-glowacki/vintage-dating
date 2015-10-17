@@ -1,41 +1,37 @@
 <div class="container">
   <div class="starter-template" style="padding">
-    <h1>Wypełnij formularz poniżej</h1>
+    <h1 class="text-center">Wypełnij formularz poniżej</h1>
 
-    <form role="form" action="/announcements" method="post">
+    <form role="form" action="/search" method="post" class="form">
       <div class="form-group">
-       <label class="col-xs-3 control-label">Płeć:</label>
-       <select id="1gender"  class="gender" name="gender">
+       <label for="gender" class="col-md-4 control-label">Moja płeć:</label>
+
+       <select id="gender" class="form-control" name="search[gender]">
         <option value="male">Mężczyzna</option>
         <option value="female">Kobieta</option>
-        <option value="other">Inna</option>
        </select>
       </div>
 
       <div class="form-group">
-       <label class="col-xs-3 control-label">Szukam:</label>
-       <select id="gender"  class="gender" name="gender">
+       <label class="col-md-4 control-label">Szukam:</label>
+
+       <select id="looking_for" class="form-control" name="search[looking_for]">
         <option value="male">Mężczyzna</option>
         <option value="female">Kobieta</option>
-        <option value="other">Inna</option>
        </select>
       </div>
 
       <div class="form-group">
-        <label class="col-xs-3 control-label">Przedział wiekowy:</label>
-        <select id="date" class="birth" name="birthyears">
+        <label class="col-md-4 control-label">Przedział wiekowy:</label>
+
+        <select id="age" class="form-control" name="search[age]">
           <option value="young">młodociany</option>
           <option value="medium">średni wiek</option>
           <option value="old">starsza osoba</option>
         </select>
       </div>
 
-      <div class="form-group">
-        <label  class="col-xs-3 control-label">Lokalizacja:</label>
-        <input id="lok" type="text" id="where"/>
-      </div>
-
-      <button type="submit" class="btn btn-default">Znajdz Pare !</button>
+      <button type="submit" class="btn btn-danger btn-block btn-lg">Znajdź drugą połówkę!</button>
     </form>
   </div>
 </div>
