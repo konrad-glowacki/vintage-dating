@@ -21,9 +21,8 @@
  */
 
 module.exports.routes = {
-  '/': {
-    view: 'homepage'
-  },
+  '/': 'SearchController.index',
+  'post /search': 'SearchController.search',
 
   'get  /announcements':             'AnnouncementsController.index',
   'get  /announcements/new':         'AnnouncementsController.new',
